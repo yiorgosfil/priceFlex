@@ -6,6 +6,7 @@ export const env = createEnv({
   server: {
     DATABASE_URL: z.string().url(), // ensures the DATABASE_URL is a valid url string
     CLERK_SECRET_KEY: z.string(),
+    CLERK_WEBHOOK_SECRET: z.string(),
   },
   experimental__runtimeEnv: process.env, // allows runtime access to env variables
 })

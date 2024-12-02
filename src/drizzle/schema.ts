@@ -40,8 +40,11 @@ export const ProductTable = pgTable(
 export const productRelations = relations(
   ProductTable,
   ({ one, many }) => ({
+    // Each product in ProductTable can have one associated row in ProductCustomizationTable (e.g., a single set of customizations for a product).
     productCustomization: one(ProductCustomizationTable),
+    // A single product in ProductTable can have multiple rows in ProductViewTable (e.g., multiple views from different users or sessions).
     productView: many(ProductViewTable),
+    // A single product can be associated with multiple rows in CountryGroupDiscountTable (e.g., multiple country-based discounts for the same product).
     countryGroupDiscounts: many(CountryGroupDiscountTable)
   })
 )
@@ -153,7 +156,7 @@ export const countryGroupRelations = relations(
 )
 
 export const CountryGroupDiscountTable = pgTable(
-  'conutry_group_discounts',
+  'country_group_discounts',
   {
     countryGroupId: uuid('country_group_id')
       .notNull()
