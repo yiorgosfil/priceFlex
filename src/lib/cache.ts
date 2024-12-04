@@ -10,7 +10,7 @@ export const CACHE_TAGS = {
   products: 'products',
   productViews: 'productViews',
   subscription: 'subscription',
-  country: 'country',
+  countries: 'countries',
   countryGroups: 'countryGroups',
 } as const
 

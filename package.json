@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.3.4",
+    "@date-fns/tz": "^1.2.0",
     "@neondatabase/serverless": "^0.10.3",
     "@radix-ui/react-alert-dialog": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.2",
