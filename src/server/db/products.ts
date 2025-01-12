@@ -50,7 +50,7 @@ export function getProducts(
   userId: string,
   { limit }: { limit?: number } = {}
 ) {
-  const cacheFn = dbCache(getProducsInternal, {
+  const cacheFn = dbCache(getProductsInternal, {
     tags: [getUserTag(userId, CACHE_TAGS.products)]
   })
   return cacheFn(userId, { limit })
