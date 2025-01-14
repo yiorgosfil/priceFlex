@@ -20,7 +20,7 @@ import { createProduct, updateProduct } from '@/server/actions/products'
 import { useToast } from '@/hooks/use-toast'
 import { RequiredLabelIcon } from '@/components/RequiredLabelIcon'
 
-export function productDetailsForm({
+export function ProductDetailsForm({
   product
 }: {
   product?: {
